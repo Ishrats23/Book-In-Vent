@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book-In-Vent</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+<header class="header">
+    <h1>Book-In-Vent</h1>
+    <p>Your seamless book inventory management system</p>
+</header>
+<div class="container">
+
+    <section class="add-book">
+        <h2>Add a New Book</h2>
+        <form id="addBookForm" action="/add" method="POST">
+            <div class="form-group">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title" required>
+            </div>
+            <div class="form-group">
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author" required>
+            </div>
+            <div class="form-group">
+                <label for="genre">Genre:</label>
+                <input type="text" id="genre" name="genre" required>
+            </div>
+            <div class="form-group">
+                <label for="pubDate">Publication Date:</label>
+                <input type="date" id="pubDate" name="pubDate" required>
+            </div>
+            <div class="form-group">
+                <label for="isbn">ISBN:</label>
+                <input type="text" id="isbn" name="isbn" required>
+            </div>
+            <button type="submit">Add Book</button>
+        </form>
+    </section>
+
+
+    <section class="filter-books">
+        <h2>Filter Books</h2>
+        <form id="filterForm" action="/filter" method="GET">
+            <div class="form-group">
+                <label for="filterTitle">Title:</label>
+                <input type="text" id="filterTitle" name="filterTitle">
+            </div>
+            <div class="form-group">
+                <label for="filterAuthor">Author:</label>
+                <input type="text" id="filterAuthor" name="filterAuthor">
+            </div>
+            <div class="form-group">
+                <label for="filterGenre">Genre:</label>
+                <input type="text" id="filterGenre" name="filterGenre">
+            </div>
+            <div class="form-group">
+                <label for="filterPubDate">Publication Date:</label>
+                <input type="date" id="filterPubDate" name="filterPubDate">
+            </div>
+            <button type="submit">Filter</button>
+        </form>
+        </section>
+
+    <section class="bookishList">
+        <div id="bookList">
+            <h3>Filtered Books</h3>
+
+            <ul>
+                <li>Title: Example Book, Author: John Doe, Genre: Fiction, ISBN: 123456789</li>
+            </ul>
+        </div>
+    </section>
+</div>
+</body>
+</html>
